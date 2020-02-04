@@ -27,7 +27,7 @@ class Footermy extends Component{
         return <div> 
            
 
-            {/* <h1>{this.props.namefuck} (this comes from parents )</h1>
+            {/* <h1>{this.props.myusername} (this comes from parents )</h1>
             <h2>{this.state.desc} (this is a state manage with component)</h2>
             <h3>{this.state.desc1} (A)</h3>
             {/* <button onClick={ this.changeText.bind(this)} > Change Text</button> */}
