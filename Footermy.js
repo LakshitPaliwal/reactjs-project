@@ -7,7 +7,7 @@ class Footermy extends Component{
             myusername : ''
         }
         // this.changeText = this.ChangeText.bind(this);
-    }
+        }
  
 
     changeText = (event) => {
@@ -15,11 +15,14 @@ class Footermy extends Component{
                 myusername : event.target.value
                  })
         }
- 
+    
     whenSubmit = (event) => {
             console.log(this.state.myusername);
         }
 
+    childMethod = () => {
+        alert(' you  pressed  child button called ');
+        }
 
 
 
@@ -44,7 +47,9 @@ class Footermy extends Component{
             <div>{this.state.myusername}</div>
             {/* <input type="submit" onClick={this.whenSubmit}></input> */}
             <button type="submit" onClick={this.whenSubmit}>Submit</button>
-            </div>
+            <Child myChildbutton={this.childMethod}/>
+ 
+           </div>
     }
 
 }
