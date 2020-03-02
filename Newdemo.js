@@ -21,7 +21,7 @@ const Newdemo=({lname})=>{
     return <div>
          <h1 > GPSSSSSSSsss  {lname} </h1>
          
-    </div>
+    </div> 
  }
             //OR
 // class Newdemo extends Component{
