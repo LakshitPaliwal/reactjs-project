@@ -19,7 +19,7 @@ import './App.css';
 // if we are  writing props as parameter  
 const Newdemo=({lname})=>{
     return <div>
-         <h1 > GPSSSSSSSsss  {lname} </h1>
+         <h1 > I Love My Country  {lname} </h1>
          
     </div> 
  }
