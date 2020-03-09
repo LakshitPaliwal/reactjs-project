@@ -1,0 +1,59 @@
+By default import :-
+import CookieConsent from "react-cookie-consent";
+
+if we want to add or remove  then we have to use  this:-
+//import CookieConsent, { Cookies } from "react-cookie-consent";
+
+
+for deploying we uses this tag :-
+<CookieConsent>
+    This website uses cookies to enhance the user experience.
+</CookieConsent>
+
+
+You can optionally set some props like this (next chapter will show all props):
+
+<CookieConsent
+    location="bottom"
+    buttonText="Sure man!!"
+    cookieName="myAwesomeCookieName2"
+    style={{ background: "#2B373B" }}
+    buttonStyle={{ color: "#4e503b", fontSize: "13px" }}
+    expires={150}
+>
+    This website uses cookies to enhance the user experience.{" "}
+    <span style={{ fontSize: "10px" }}>
+    This bit of text is smaller :O
+    </span>
+</CookieConsent>
+
+
+
+ after popup appears when we scroll the webpage then it by deafult cick on YES and  automatically disappears
+ we don't need to click on Cookies Consent Popup
+ for this finctionality we will use this :-
+ 
+<CookieConsent
+    acceptOnScroll={true}
+    onAccept={({ acceptedByScrolling }) => {
+        if (acceptedByScrolling) {
+            // triggered if user scrolls past threshold
+            alert("Accept was triggered by user scrolling");
+        } else {
+            alert("Accept was triggered by clicking the Accept button");
+        }
+    }}
+>
+ 
+</CookieConsent>
+
+
+if we wants alert after clicking on Cookie Consent Popup
+then we wil use this  :-
+
+<CookieConsent
+    enableDeclineButton
+    onDecline={() => {alert("nay!")}}
+>
+ 
+</CookieConsent>
